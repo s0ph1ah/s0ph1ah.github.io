@@ -1,0 +1,487 @@
+<!-- This tells the browser this is an HTML5 document -->
+<!DOCTYPE html>
+
+<!-- The <html> tag wraps everything. lang="en" means the page is in English -->
+<html lang="en">
+
+<!-- The <head> section contains information ABOUT the page (not what's shown on it) -->
+<head>
+    <!-- This sets the character encoding so special characters display correctly -->
+    <meta charset="UTF-8">
+    
+    <!-- This makes your website look good on mobile phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- This is the title that appears in your browser tab -->
+    <title> I Love Anna </title>
+    
+    <!-- The <style> tag is where we write CSS to make things look pretty -->
+    <style>
+        /* CSS COMMENTS look like this - they use /* and */ */
+        
+        /* "body" styles the entire page */
+        body {
+            font-family: Georgia, serif;  /* Sets the font for all text */
+            max-width: 800px;                /* Limits how wide the content can be */
+            margin: 0 auto;                  /* Centers everything horizontally */
+            padding: 20px;                   /* Adds space around the edges */
+            background-color: #cbb7b7;       /* Light gray background color */
+        }
+        
+        /* "header" styles the top section of your page */
+        header {
+            background-color: #af4c82;       /* Pink background */
+            color: #cbb7b7;                    /* White text color */
+            padding: 20px;                   /* Space inside the header */
+            text-align: center;              /* Centers the text */
+            border-radius: 8px;              /* Rounds the corners */
+        }
+        
+        /* "main" styles the middle content section */
+        main {
+            background-color: #cbb7b7;         /* Matches body background */
+            padding: 20px;                   /* Space inside the box */
+            margin-top: 20px;                /* Space above the box */
+            border-radius: 8px;              /* Rounds the corners */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Adds a subtle shadow */
+        }
+        
+        /* This styles all h2 headings */
+        h2 {
+            color: #7646b4;                  /* Makes h2 headings purple */
+        }
+        
+        /* ".button" styles anything with class="button" */
+        .button {
+            background-color: #af4c65;       /* Pink background */
+            color: #cbb7b7;                    /* White text */
+            padding: 10px 20px;              /* Space inside the button */
+            text-decoration: none;           /* Removes underline from links */
+            border-radius: 5px;              /* Rounds button corners */
+            display: inline-block;           /* Makes links behave like buttons */
+            margin-top: 10px;                /* Space above each button */
+        }
+        
+        /* ":hover" means "when you move your mouse over it" */
+        .button:hover {
+            background-color: #72305c;       /* Darker pink when hovering */
+        }
+        
+        /* "footer" styles the bottom section */
+        footer {
+            text-align: center;              /* Centers the text */
+            margin-top: 30px;                /* Space above the footer */
+            padding: 20px;                   /* Space inside the footer */
+            color: #666;                     /* Gray text color */
+        }
+        
+        /* Styles for images to make them look nice */
+        img {
+            max-width: 25%;                 /* Image won't be wider than its container */
+            height: auto;                    /* Keeps the image proportions correct */
+            border-radius: 8px;              /* Rounds the corners */
+            margin: 15px 0;                  /* Adds space above and below */
+        }
+        
+        /* Special style for profile pictures */
+        .profile-pic {
+            width: 200px;                    /* Makes it 200 pixels wide */
+            height: 200px;                   /* Makes it 200 pixels tall */
+            border-radius: 50%;              /* Makes it circular */
+            object-fit: cover;               /* Crops the image to fit nicely */
+            display: block;                  /* Makes it a block element */
+            margin: 20px auto;               /* Centers it horizontally */
+            border: 4px solid #af4c82;       /* Adds a pink border to match your theme */
+        }
+        
+        /* Styles for the question section with yes/no options */
+        .question-box {
+            background-color: #e6d9d9;       /* Light pink background */
+            padding: 20px;                   /* Space inside the box */
+            border-radius: 8px;              /* Rounds the corners */
+            margin: 20px 0;                  /* Space above and below */
+        }
+        
+        /* Container for the yes/no options */
+        .options-container {
+            display: flex;                   /* Puts items side by side */
+            gap: 20px;                       /* Space between options */
+            margin-top: 15px;                /* Space above the options */
+            align-items: center;             /* Aligns items vertically */
+        }
+        
+        /* Style for the BIG yes option */
+        .big-yes {
+            font-size: 48px;                 /* Makes YES huge */
+            font-weight: bold;               /* Makes it bold */
+            color: #af4c82;                  /* Pink color to match your theme */
+            cursor: pointer;                 /* Shows it's clickable */
+            display: flex;                   /* Helps align radio button and text */
+            align-items: center;             /* Centers radio button with text */
+            gap: 10px;                       /* Space between radio button and text */
+        }
+        
+        /* Makes the YES radio button bigger too */
+        .big-yes input[type="radio"] {
+            width: 30px;                     /* Bigger radio button width */
+            height: 30px;                    /* Bigger radio button height */
+            cursor: pointer;                 /* Shows it's clickable */
+        }
+        
+        /* Style for the small no option */
+        .small-no {
+            font-size: 14px;                 /* Makes no tiny */
+            color: #999;                     /* Gray color */
+            cursor: pointer;                 /* Shows it's clickable */
+            display: flex;                   /* Helps align radio button and text */
+            align-items: center;             /* Centers radio button with text */
+            gap: 5px;                        /* Space between radio button and text */
+        }
+        
+        /* Makes the no radio button smaller */
+        .small-no input[type="radio"] {
+            width: 15px;                     /* Smaller radio button width */
+            height: 15px;                    /* Smaller radio button height */
+            cursor: pointer;                 /* Shows it's clickable */
+        }
+        
+        /* Container to put image and Spotify side by side */
+        .side-by-side {
+            display: flex;                   /* Makes items sit next to each other */
+            gap: 20px;                       /* Space between the items */
+            align-items: center;             /* Centers items vertically */
+            justify-content: center;         /* Centers everything horizontally */
+            flex-wrap: wrap;                 /* Wraps to next line on small screens */
+            margin: 20px 0;                  /* Space above and below */
+        }
+    </style>
+</head>
+
+<!-- The <body> section contains everything you SEE on the page -->
+<body>
+    <!-- HTML COMMENTS look like this - they help you remember what things do -->
+    
+    <!-- The header is the top section of your page -->
+    <header>
+        <!-- <h1> is the biggest heading - use it for your main title -->
+        <h1>Happy Valentine's Day Anna Hanako!!</h1>
+        
+        <!-- <p> is a paragraph - use it for regular text -->
+        <p>I love you so so so much</p>
+    </header>
+    
+    
+    
+    <!-- The main section contains the bulk of your content -->
+    <main>
+        <!-- <h2> is a smaller heading - use it for section titles -->
+        <h2>You + Me --> Forever</h2>
+        
+        <!-- Container to put image and Spotify side by side -->
+        <div class="side-by-side">
+            <!-- PROFILE PICTURE - Replace "anna-photo.jpg" with your actual image filename -->
+            <!-- Make sure your image is in the same folder as this HTML file! -->
+            <img src="anna-photo.jpeg">
+            
+            <!-- SPOTIFY PLAYLIST -->
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2S0awoDBeUPqkn2zi08Zq3?utm_source=generator&theme=0" width="40%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        
+        <!-- Another paragraph -->
+        <p>This is our second Valentine's day together. I am so excited to spend it with you and I am the luckiest girl in the world. </p>
+        
+        <!-- YES/NO RADIO BUTTONS -->
+        <div class="question-box">
+            <p><strong>Will you be my Valentine?</strong></p>
+            <div class="options-container">
+                <!-- Big YES option with radio button -->
+                <!-- Radio buttons with the same "name" means only one can be selected -->
+                <label class="big-yes">
+                    <input type="radio" name="valentine" id="yes-option">
+                    YES!
+                </label>
+                
+                <!-- Small no option with radio button -->
+                <label class="small-no">
+                    <input type="radio" name="valentine" id="no-option">
+                    no
+                </label>
+            </div>
+        </div>
+        
+        <!-- Another section -->
+        <h2>I'm so excited for another year of</h2>
+        
+        <!-- Container to put image and list side by side -->
+        <div class="side-by-side">
+            <!-- REGULAR IMAGE - This could be a photo of you two together -->
+            <!-- Replace "us-together.jpg" with your image filename -->
+            <img src="us-together.jpeg">
+            
+            <!-- <ul> creates an unordered (bullet point) list -->
+            <ul>
+                <!-- Each <li> is one item in the list -->
+                <li>Learning new things together</li>
+                <li>Dancing together</li>
+                <li>Exploring together</li>
+                <li>Laughing together</li>
+                <li>Running together</li>
+                <li>Singing together</li>
+                <li>Cooking together</li>
+                <li>Crafting together</li>
+                <li>Watching movies together</li>
+                <li>EVERYTHING WITH YOU ALWAYS!!</li>
+            </ul>  <!-- This closes the list -->
+        </div>
+        
+        <!-- PAC-MAN GAME SECTION -->
+        <h2>Play a Game!</h2>
+        <p style="text-align: center;">Help Pac-Man collect 17 hearts! Use arrow keys to move. ❤️</p>
+        
+        <!-- Game Container -->
+        <div style="display: flex; flex-direction: column; align-items: center; margin: 30px 0; background-color: #7d398c; padding: 20px; border-radius: 12px;">
+            <div id="gameInfo" style="display: flex; gap: 30px; margin-bottom: 15px; font-size: 18px; color: #FFD700;">
+                <div>Hearts: <span id="score">0</span> / 17</div>
+            </div>
+            <canvas id="gameCanvas" width="400" height="400" style="border: 3px solid #FFD700; background-color: #1a1a2e;"></canvas>
+            <p style="color: #FFD700; margin-top: 15px; text-align: center;">Use Arrow Keys to Move</p>
+        </div>
+        
+        <!-- Win Message (hidden until player wins) -->
+        <div id="winMessage" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #af4c82; padding: 40px; border-radius: 20px; text-align: center; display: none; z-index: 10; box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);">
+            <h2 style="color: #FFD700; font-size: 36px; margin: 0 0 20px 0;">Congratulations Winner!!</h2>
+            <p style="font-size: 20px; margin: 10px 0; color: white;">Your prize is my heart now and forever ❤️</p>
+            <button id="restartBtn" style="background-color: #FFD700; color: #000; border: none; padding: 15px 30px; font-size: 18px; border-radius: 10px; cursor: pointer; margin-top: 20px; font-family: Georgia, serif;">Play Again</button>
+        </div>
+        
+        <script>
+            // Game variables
+            const canvas = document.getElementById('gameCanvas');
+            const ctx = canvas.getContext('2d');
+            const scoreElement = document.getElementById('score');
+            const winMessage = document.getElementById('winMessage');
+            const restartBtn = document.getElementById('restartBtn');
+            
+            // Game settings
+            const gridSize = 20;
+            const tileCount = canvas.width / gridSize;
+            
+            // Pac-Man
+            let pacman = {
+                x: 10,
+                y: 10,
+                direction: 'right',
+                mouthOpen: true
+            };
+            
+            // Hearts
+            let hearts = [];
+            let score = 0;
+            const targetScore = 17;
+            
+            // Game state
+            let gameRunning = true;
+            let animationFrame = 0;
+            
+            // Initialize hearts
+            function initHearts() {
+                hearts = [];
+                for (let i = 0; i < targetScore; i++) {
+                    let newHeart;
+                    let attempts = 0;
+                    do {
+                        newHeart = {
+                            x: Math.floor(Math.random() * tileCount),
+                            y: Math.floor(Math.random() * tileCount)
+                        };
+                        attempts++;
+                    } while (attempts < 100 && hearts.some(h => h.x === newHeart.x && h.y === newHeart.y));
+                    
+                    hearts.push(newHeart);
+                }
+            }
+            
+            // Draw Pac-Man
+            function drawPacman() {
+                const x = pacman.x * gridSize + gridSize / 2;
+                const y = pacman.y * gridSize + gridSize / 2;
+                const radius = gridSize / 2 - 2;
+                
+                // Determine mouth angle based on direction
+                let startAngle, endAngle;
+                const mouthSize = pacman.mouthOpen ? 0.25 : 0.1;
+                
+                switch(pacman.direction) {
+                    case 'right':
+                        startAngle = mouthSize * Math.PI;
+                        endAngle = (2 - mouthSize) * Math.PI;
+                        break;
+                    case 'left':
+                        startAngle = (1 + mouthSize) * Math.PI;
+                        endAngle = (1 - mouthSize) * Math.PI;
+                        break;
+                    case 'up':
+                        startAngle = (1.5 + mouthSize) * Math.PI;
+                        endAngle = (1.5 - mouthSize) * Math.PI;
+                        break;
+                    case 'down':
+                        startAngle = (0.5 + mouthSize) * Math.PI;
+                        endAngle = (0.5 - mouthSize) * Math.PI;
+                        break;
+                }
+                
+                ctx.fillStyle = '#FFD700';
+                ctx.beginPath();
+                ctx.arc(x, y, radius, startAngle, endAngle);
+                ctx.lineTo(x, y);
+                ctx.fill();
+            }
+            
+            // Draw hearts
+            function drawHearts() {
+                ctx.font = `${gridSize - 4}px Arial`;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                
+                hearts.forEach(heart => {
+                    const x = heart.x * gridSize + gridSize / 2;
+                    const y = heart.y * gridSize + gridSize / 2;
+                    ctx.fillText('❤️', x, y);
+                });
+            }
+            
+            // Check collision with hearts
+            function checkHeartCollision() {
+                for (let i = hearts.length - 1; i >= 0; i--) {
+                    if (hearts[i].x === pacman.x && hearts[i].y === pacman.y) {
+                        hearts.splice(i, 1);
+                        score++;
+                        scoreElement.textContent = score;
+                        
+                        if (score >= targetScore) {
+                            gameRunning = false;
+                            winMessage.style.display = 'block';
+                        }
+                    }
+                }
+            }
+            
+            // Move Pac-Man
+            function movePacman() {
+                switch(pacman.direction) {
+                    case 'up':
+                        pacman.y = (pacman.y - 1 + tileCount) % tileCount;
+                        break;
+                    case 'down':
+                        pacman.y = (pacman.y + 1) % tileCount;
+                        break;
+                    case 'left':
+                        pacman.x = (pacman.x - 1 + tileCount) % tileCount;
+                        break;
+                    case 'right':
+                        pacman.x = (pacman.x + 1) % tileCount;
+                        break;
+                }
+            }
+            
+            // Game loop
+            function gameLoop() {
+                if (!gameRunning) return;
+                
+                // Clear canvas
+                ctx.fillStyle = '#1a1a2e';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                // Move and draw
+                movePacman();
+                checkHeartCollision();
+                
+                // Animate mouth
+                animationFrame++;
+                if (animationFrame % 10 === 0) {
+                    pacman.mouthOpen = !pacman.mouthOpen;
+                }
+                
+                drawHearts();
+                drawPacman();
+                
+                setTimeout(() => requestAnimationFrame(gameLoop), 100);
+            }
+            
+            // Keyboard controls
+            document.addEventListener('keydown', (e) => {
+                if (!gameRunning) return;
+                
+                switch(e.key) {
+                    case 'ArrowUp':
+                        pacman.direction = 'up';
+                        e.preventDefault();
+                        break;
+                    case 'ArrowDown':
+                        pacman.direction = 'down';
+                        e.preventDefault();
+                        break;
+                    case 'ArrowLeft':
+                        pacman.direction = 'left';
+                        e.preventDefault();
+                        break;
+                    case 'ArrowRight':
+                        pacman.direction = 'right';
+                        e.preventDefault();
+                        break;
+                }
+            });
+            
+            // Restart button
+            restartBtn.addEventListener('click', () => {
+                score = 0;
+                scoreElement.textContent = '0';
+                pacman.x = 10;
+                pacman.y = 10;
+                pacman.direction = 'right';
+                gameRunning = true;
+                winMessage.style.display = 'none';
+                initHearts();
+                gameLoop();
+            });
+            
+            // Start game
+            initHearts();
+            gameLoop();
+        </script>
+        
+        <!-- Script for YES button popup -->
+        <script>
+            // Get the YES radio button
+            const yesButton = document.getElementById('yes-option');
+            
+            // Add click event listener to show popup when YES is clicked
+            yesButton.addEventListener('click', () => {
+                alert('YAYYYYYYYYY I AM THE HAPPIEST GIRL EVER');
+            });
+        </script>
+        
+        <!-- Another section with links -->
+        <h2>Where will we go next!</h2>
+        <p>Hmmmm....</p>
+        
+        <!-- <a> creates a link. href="..." is where the link goes -->
+        <!-- class="button" applies the button styles we defined in CSS -->
+        <a href="https://maps.app.goo.gl/SsRo8f5gXdB2BC4d7" class="button">Paris?</a>
+        <a href="https://dtf.com/en-us/locations/new-york" class="button">New York?</a>
+    
+        
+
+    </main>
+    
+    <!-- The footer is at the bottom of your page -->
+    <footer>
+        <!-- &copy; is a special code that creates the © symbol -->
+        <p>&copy; 2026 Made with ❤️ for Anna</p>
+    </footer>
+    
+<!-- This closes the body section -->
+</body>
+
+<!-- This closes the entire HTML document -->
+</html>
