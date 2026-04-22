@@ -45,7 +45,22 @@
             border-radius: 8px;              
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);  
         }
-        
+
+        .main2 {
+            background-color: #638ecb;        
+            padding: 20px;                  
+            margin-top: 20px;                
+            border-radius: 8px;              
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);  
+        }        
+
+        .main3 {
+            background-color: #8a9e7e;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
 
         h2 {
             color: #7646b4;                 
@@ -77,7 +92,7 @@
         
 
         img {
-            max-width: 25%;                
+            max-width: 35%;                
             height: auto;                    
             border-radius: 8px;              
             margin: 15px 0;                 
@@ -164,7 +179,7 @@
     
     <header>
        
-        <h1>Happy Valentine's Day Anna Hanako!!</h1>
+        <h1>For Anna Hanako, From Soph</h1>
         
         
         <p>I love you so so so much</p>
@@ -174,7 +189,11 @@
     
 
     <main>
+        <h1>Happy Valentine's Day Anna Hanako!!</h1>
         
+        
+        <p>I love you so so so much</p>
+
         <h2>You + Me --> Forever</h2>
         
        
@@ -233,20 +252,6 @@
             </ul> 
         </div>
         
-        <h2> 04/22/2026 </h2>
-        
-
-        <div class="side-by-side">
-
-            <img src="puppies.jpeg">
-            
-
-            <ul>
-
-                <p> I am missing you and the puppies today. I'm so excited to be home and watch movies on the couch with the dogs and walk with you and listen to music with you. Song for today that is making me think of you and me: </p>
-                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1zE0JZiHOBPlHwLsf4wBld?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>           
-            </ul> 
-        </div>
 
         <h2>Little Game!</h2>
         <p style="text-align: center;">Help Pac-Man collect 17 hearts for a prize :) move with arrow keys </p>
@@ -481,9 +486,260 @@
         <a href="https://maps.app.goo.gl/SsRo8f5gXdB2BC4d7" class="button">Paris?</a>
         <a href="https://dtf.com/en-us/locations/new-york" class="button">New York?</a>
     
+    </main>
+
+
+    <div class="main2">
+        <h2> 04/22/2026 </h2>
         
 
-    </main>
+        <div class="side-by-side">
+
+            <img src="puppies.jpeg">
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1zE0JZiHOBPlHwLsf4wBld?utm_source=generator" width="45%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>           
+
+        </div>
+ 
+        <ul>
+
+                <p> I am missing you and the puppies today. I'm so excited to be home and watch movies on the couch with the dogs and walk with you and listen to music with you. Song for today that is making me think of you and me is East of the Sun, West of the Moon by Billie Holiday. When I hear it I imagine us in our own home in our kitchen cooking together. I am also wondering if you would like to attend this half marathon with me in Portland, ME on Saturday, June 6th. I think it might be fun but I'm not sure about the logistics. Let me know what you think! </p>
+                <a href="https://oldporthalfmarathon.com/" class="button">Half?</a>   
+        </ul> 
+
+    </div>
+        
+
+    <div class="main3">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.cw-wrap{padding:1.5rem 0;font-family:Georgia,serif}
+.cw-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:8px}
+.cw-grid-wrap{overflow-x:auto;margin-bottom:1.5rem}
+table.cw-grid{border-collapse:collapse;margin:0 auto}
+table.cw-grid td{width:30px;height:30px;border:0.5px solid #aaa;position:relative;background:#fff}
+table.cw-grid td.black{background:#2C2C2A;border-color:#2C2C2A}
+table.cw-grid td.highlighted{background:#FBEAF0}
+table.cw-grid td.correct{background:#E1F5EE}
+table.cw-grid td input{position:absolute;inset:0;width:100%;height:100%;border:none;background:transparent;text-align:center;font-size:13px;font-weight:bold;color:#222;text-transform:uppercase;cursor:pointer;padding:0;outline:none}
+.cell-num{position:absolute;top:1px;left:2px;font-size:7px;color:#888;line-height:1;pointer-events:none;z-index:1}
+.clues-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.clue-item{display:flex;gap:8px;margin-bottom:6px;cursor:pointer;padding:4px 6px;border-radius:6px}
+.clue-item:hover{background:#f5f5f5}
+.clue-item.active{background:#FBEAF0}
+.clue-item.done{opacity:0.5}
+.clue-num{font-size:13px;font-weight:bold;color:#993556;min-width:20px}
+.clue-text{font-size:13px;color:#555;line-height:1.4}
+.cw-win-box{min-height:300px;background:rgba(0,0,0,0.45);display:flex;align-items:center;justify-content:center;border-radius:12px;margin-top:1rem;position:relative;overflow:hidden}
+.cw-win-card{background:#fff;border-radius:12px;border:0.5px solid #ddd;padding:2rem;text-align:center;max-width:360px}
+.cw-yes-btn{padding:12px 28px;background:#D4537E;color:white;border:none;border-radius:8px;font-size:16px;font-weight:bold;cursor:pointer;margin-right:8px;font-family:Georgia,serif}
+.cw-no-btn{padding:10px 16px;background:#f5f5f5;color:#999;border:0.5px solid #ddd;border-radius:8px;font-size:12px;cursor:pointer;font-family:Georgia,serif}
+.cw-cp{position:absolute;width:7px;height:7px;border-radius:2px;animation:cwcff linear forwards}
+@keyframes cwcff{0%{transform:translateY(-10px) rotate(0deg);opacity:1}100%{transform:translateY(350px) rotate(720deg);opacity:0}}
+@media(max-width:520px){.clues-wrap{grid-template-columns:1fr}table.cw-grid td{width:22px;height:22px}table.cw-grid td input{font-size:10px}.cell-num{font-size:6px}}
+</style>
+
+<div class="cw-wrap">
+  <div class="cw-top">
+    <span style="font-size:15px;font-weight:bold;color:#333">Solve to reveal something special...</span>
+    <span style="font-size:13px;color:#888" id="cw-prog">0 / 16 words</span>
+  </div>
+  <div class="cw-grid-wrap"><table class="cw-grid" id="cw-grid"></table></div>
+  <div class="clues-wrap">
+    <div><h3 style="font-size:14px;font-weight:bold;margin-bottom:8px">Across</h3><div id="cw-cl-A"></div></div>
+    <div><h3 style="font-size:14px;font-weight:bold;margin-bottom:8px">Down</h3><div id="cw-cl-D"></div></div>
+  </div>
+  <div id="cw-winArea" style="display:none"></div>
+</div>
+
+<script>
+(function(){
+const ROWS=20,COLS=19;
+const ans=Array.from({length:ROWS},()=>Array(COLS).fill(''));
+const meta=Array.from({length:ROWS},()=>Array(COLS).fill(null));
+
+const PL=[
+  {id:1, word:"WOODSTAR",clue:"Our first date spot",                                           d:"A",r:2, c:0},
+  {id:2, word:"MADRID",  clue:"First place we traveled to together",                           d:"D",r:0, c:3},
+  {id:3, word:"MAISEL",  clue:"Show you love that took us a while to come back to",            d:"D",r:5, c:6},
+  {id:4, word:"SOBI",    clue:"My nickname — almost a type of noodle",                         d:"A",r:8, c:6},
+  {id:5, word:"PORTUGAL",clue:"Where we want to travel to",                                    d:"A",r:6, c:0},
+  {id:6, word:"TOFU",    clue:"Food we've gotten really good at cooking",                      d:"D",r:6, c:3},
+  {id:7, word:"MAY",     clue:"Month of our first union game",                                 d:"A",r:6, c:14},
+  {id:8, word:"NYC",     clue:"Where I had Japanese cold noodles",                             d:"D",r:5, c:16},
+  {id:9, word:"WEBSITE", clue:"What I made you for Valentine's Day",                           d:"A",r:11,c:0},
+  {id:10,word:"ANNQ",    clue:"Funny typo at Philly Pride",                                    d:"A",r:1, c:3},
+  {id:11,word:"BEAR",    clue:"___ spray — what you took everywhere in Montana",               d:"D",r:8, c:8},
+  {id:12,word:"KEG",     clue:"What we acquired on a night out in April of your senior year",  d:"D",r:9, c:12},
+  {id:13,word:"OZZI",    clue:"I found out you hoarded these when I first came to Bryn Mawr",  d:"A",r:13,c:0},
+  {id:14,word:"SOCCER",  clue:"Sport I want to play with you this summer",                     d:"D",r:11,c:11},
+  {id:15,word:"BIKE",    clue:"What we're teaching Stella this summer",                        d:"A",r:15,c:8},
+  {id:16,word:"LACOMBE", clue:"Professor of the class we had together",                        d:"A",r:18,c:0},
+];
+
+PL.forEach(p=>{
+  for(let i=0;i<p.word.length;i++){
+    const r=p.d==='A'?p.r:p.r+i,c=p.d==='A'?p.c+i:p.c;
+    if(r<ROWS&&c<COLS){ans[r][c]=p.word[i];if(!meta[r][c])meta[r][c]={num:null};}
+  }
+  if(!meta[p.r][p.c])meta[p.r][p.c]={num:null};
+  meta[p.r][p.c].num=p.id;
+});
+
+let active=null;
+const usr=Array.from({length:ROWS},()=>Array(COLS).fill(''));
+const slv={};
+
+function gc(r,c){return document.querySelector(`#cw-grid input[data-r="${r}"][data-c="${c}"]`);}
+
+function recolor(){
+  document.querySelectorAll('#cw-grid td').forEach(td=>{
+    td.classList.remove('highlighted','correct');
+    const i=td.querySelector('input');
+    if(i){const r=+i.dataset.r,c=+i.dataset.c;if(ans[r][c]&&usr[r][c]===ans[r][c])td.classList.add('correct');}
+  });
+  if(!active)return;
+  const w=PL.find(x=>x.id===active);
+  for(let i=0;i<w.word.length;i++){
+    const r=w.d==='A'?w.r:w.r+i,c=w.d==='A'?w.c+i:w.c;
+    const inp=gc(r,c);if(inp)inp.closest('td').classList.add('highlighted');
+  }
+}
+
+function hl(id){
+  active=id;recolor();
+  document.querySelectorAll('.clue-item').forEach(el=>el.classList.toggle('active',+el.dataset.id===id));
+}
+
+function cellClick(r,c){
+  const ws=PL.filter(w=>w.d==='A'?w.r===r&&c>=w.c&&c<w.c+w.word.length:w.c===c&&r>=w.r&&r<w.r+w.word.length);
+  if(!ws.length)return;
+  if(ws.length===1){hl(ws[0].id);return;}
+  hl(active&&ws.find(x=>x.id===active)?ws.find(x=>x.id!==active).id:ws[0].id);
+}
+
+function onInp(e,r,c){
+  const v=e.target.value.toUpperCase().slice(-1);
+  e.target.value=v;usr[r][c]=v;
+  if(v){const w=PL.find(x=>x.id===active);if(w){w.d==='A'?mf(r,c+1):mf(r+1,c);}}
+  chk();upd();
+}
+
+function onKey(e,r,c){
+  if(e.key==='Backspace'){
+    if(usr[r][c]){usr[r][c]='';gc(r,c).value='';}
+    else{const w=PL.find(x=>x.id===active);if(w){w.d==='A'?mf(r,c-1):mf(r-1,c);}}
+    chk();upd();e.preventDefault();
+  }else if(e.key==='ArrowRight'){mf(r,c+1);e.preventDefault();}
+  else if(e.key==='ArrowLeft'){mf(r,c-1);e.preventDefault();}
+  else if(e.key==='ArrowDown'){mf(r+1,c);e.preventDefault();}
+  else if(e.key==='ArrowUp'){mf(r-1,c);e.preventDefault();}
+}
+
+function mf(r,c){const i=gc(r,c);if(i)i.focus();}
+
+function chk(){
+  PL.forEach(w=>{
+    let ok=true;
+    for(let i=0;i<w.word.length;i++){
+      const r=w.d==='A'?w.r:w.r+i,c=w.d==='A'?w.c+i:w.c;
+      if(usr[r][c]!==w.word[i]){ok=false;break;}
+    }
+    slv[w.id]=ok;
+    const el=document.querySelector(`.clue-item[data-id="${w.id}"]`);
+    if(el)el.classList.toggle('done',ok);
+  });
+  recolor();
+  if(Object.values(slv).filter(Boolean).length===PL.length)setTimeout(showWin,500);
+}
+
+function upd(){
+  document.getElementById('cw-prog').textContent=Object.values(slv).filter(Boolean).length+' / '+PL.length+' words';
+}
+
+function buildGrid(){
+  const tbl=document.getElementById('cw-grid');
+  tbl.innerHTML='';
+  for(let r=0;r<ROWS;r++){
+    const tr=document.createElement('tr');
+    for(let c=0;c<COLS;c++){
+      const td=document.createElement('td');
+      if(!meta[r][c]){td.classList.add('black');}
+      else{
+        if(meta[r][c].num){const s=document.createElement('span');s.className='cell-num';s.textContent=meta[r][c].num;td.appendChild(s);}
+        const inp=document.createElement('input');
+        inp.type='text';inp.maxLength=1;inp.dataset.r=r;inp.dataset.c=c;
+        inp.addEventListener('click',()=>cellClick(r,c));
+        inp.addEventListener('keydown',e=>onKey(e,r,c));
+        inp.addEventListener('input',e=>onInp(e,r,c));
+        td.appendChild(inp);
+      }
+      tr.appendChild(td);
+    }
+    tbl.appendChild(tr);
+  }
+  ['A','D'].forEach(d=>{
+    const el=document.getElementById('cw-cl-'+d);
+    el.innerHTML='';
+    PL.filter(w=>w.d===d).sort((a,b)=>a.id-b.id).forEach(w=>{
+      const div=document.createElement('div');
+      div.className='clue-item';div.dataset.id=w.id;
+      div.innerHTML=`<span class="clue-num">${w.id}</span><span class="clue-text">${w.clue}</span>`;
+      div.addEventListener('click',()=>{hl(w.id);const i=gc(w.r,w.c);if(i)i.focus();});
+      el.appendChild(div);
+    });
+  });
+}
+
+function showWin(){
+  document.querySelector('.cw-grid-wrap').style.opacity='0.4';
+  document.querySelector('.clues-wrap').style.display='none';
+  const wa=document.getElementById('cw-winArea');
+  wa.style.display='block';
+  wa.innerHTML=`<div class="cw-win-box" id="cw-wb">
+    <div class="cw-win-card">
+      <div style="font-size:28px;margin-bottom:0.75rem">&#x1F497;</div>
+      <div style="font-size:20px;font-weight:bold;color:#993556;margin-bottom:0.5rem;font-family:Georgia,serif">You solved it!</div>
+      <div style="font-size:15px;color:#555;margin-bottom:1.25rem;line-height:1.6;font-family:Georgia,serif">
+        I have a question for you...<br>
+        <strong style="color:#993556;font-size:17px">Will you go to Senior Ball with me?</strong>
+      </div>
+      <button class="cw-yes-btn" onclick="cwYes()">YES!!</button>
+      <button class="cw-no-btn" id="cw-nob" onclick="cwNo()">no</button>
+      <div id="cw-ym" style="display:none;margin-top:1rem;font-size:15px;color:#993556;font-weight:bold;font-family:Georgia,serif"></div>
+    </div>
+  </div>`;
+  cwConf();
+}
+
+function cwConf(){
+  const b=document.getElementById('cw-wb');if(!b)return;
+  const cols=['#D4537E','#ED93B1','#F4C0D1','#7F77DD','#5DCAA5','#EF9F27'];
+  for(let i=0;i<55;i++)setTimeout(()=>{
+    const p=document.createElement('div');p.className='cw-cp';
+    p.style.cssText=`left:${Math.random()*100}%;background:${cols[~~(Math.random()*6)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*0.4}s`;
+    b.appendChild(p);setTimeout(()=>p.remove(),4000);
+  },i*35);
+}
+
+window.cwNo=function(){
+  const b=document.getElementById('cw-nob');
+  b.style.position='relative';
+  b.style.left=(Math.random()*120-60)+'px';
+  b.style.top=(Math.random()*40-20)+'px';
+  b.style.fontSize=Math.max(9,parseInt(b.style.fontSize||12)-1)+'px';
+};
+
+window.cwYes=function(){
+  document.getElementById('cw-ym').style.display='block';
+  document.getElementById('cw-ym').textContent='YAYYYYY I AM THE HAPPIEST GIRL EVER!! 💗';
+  document.querySelector('.cw-yes-btn').textContent='YAY!!';
+  cwConf();
+};
+
+buildGrid();
+})();
+</script>
+    </div>
     
 
     <footer>
